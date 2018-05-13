@@ -1,0 +1,70 @@
+mat-card {
+    width: calc(31.99% - 48px);
+    float: left;
+    margin: 0.5%;
+}
+
+mat-card:nth-child(4n) {
+    margin-right: 1%;
+}
+mat-card:nth-child(5n),mat-card:nth-child(2) {
+    margin-left: 1%;
+}
+.action {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+    z-index: 9;
+}
+
+mat-card {
+    padding-top: 0!important;
+}
+
+.thumb:before {
+    top: 0;
+    bottom: 70px;
+    right: 0;
+    left: 0;
+    background: rgba(0,0,0,0.2);
+    content: '';
+    position: absolute;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+button.create-button {
+    margin-left: 20px;
+}
+.thumb {
+    margin: 0 -24px 16px -24px;
+    overflow: hidden;
+    height: 450px;
+    display: flex;
+    align-items: center;
+}
+
+.thumb img {
+    margin: 0!important;
+    vertical-align: middle;
+    display: flex;
+    width: 100%;
+}
+mat-card-content p {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 17px;
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: -10px;
+}
+
+mat-card-content span {
+    float: right;
+    background: #ffd740;
+    padding: 5px 10px;
+    border-radius: 3px;
+    border-bottom: solid 2px #ccaa29;
+    margin-top: 15px;
+}

@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  	<span>Products</span>
+  	<button mat-raised-button class="create-button"  color="accent" (click)="openDialog()"> 
+    	Create New
+    </button>
+    <span class="example-spacer"></span>
+    <button mat-raised-button class="login-button"  color="warn" (click)="logout()"> 
+    	Logout
+    </button>
+</mat-toolbar>
+<mat-card class="example-card" *ngFor="let res of product" >
+	<div class="action">
+		<button mat-icon-button (click)="openDialog(res)"> 
+    	<mat-icon>edit</mat-icon>
+    </button>
+    <button mat-icon-button (click)="delete(res)"> 
+    	<mat-icon>delete</mat-icon>
+    </button>
+	</div>
+  <div class="thumb">
+    <img mat-card-image src="{{res.imageurl}}" alt="{{res.name}}" onerror="this.onerror=null;this.src='assets/img/noimage.jpg';">
+  </div>
+  <mat-card-content>
+    <p>{{res.name}}</p>
+    <span>{{res.price  | currency:'$ ':true:'1.0-2'}}</span>
+  </mat-card-content>
+</mat-card>

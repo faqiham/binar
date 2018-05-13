@@ -1,0 +1,32 @@
+<div mat-dialog-content>
+    <mat-grid-list cols="9" rowHeight="75px">
+        <mat-grid-tile [colspan]="7">
+            <mat-form-field class="justifier">
+                <input matInput name="name" placeholder="Product Name" type="text"  [(ngModel)]="detail.name" required>
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <!-- Markup for getting Username ends -->
+    <!-- Markup for getting Username starts -->
+    <mat-grid-list cols="9" rowHeight="75px">
+        <mat-grid-tile [colspan]="7">
+            <mat-form-field class="justifier">
+                <input matInput name="price" placeholder="Price (Dollar USD)" type="number"  [(ngModel)]="detail.price" required>
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+    <!-- Markup for getting Username ends -->
+
+    <!-- Markup for getting Password starts -->
+    <mat-grid-list cols="9" rowHeight="100px">
+        <mat-grid-tile [colspan]="7">
+            <mat-form-field class="justifier">
+                <input matInput name="imageurl" placeholder="Image URL" type="url"  [(ngModel)]="detail.imageurl" required>
+            </mat-form-field>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Back</button>
+  <button mat-button  mat-raised-button cdkFocusInitial color="accent" (click)="save()">Save</button>
+</div>

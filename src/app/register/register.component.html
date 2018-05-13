@@ -1,0 +1,67 @@
+
+<mat-grid-list cols="3">
+    <mat-grid-tile></mat-grid-tile>
+ 
+    <!-- Writing markup for login starts -->
+    <mat-grid-tile class='login-element'>
+        <div class="login-container">
+ 
+            <!-- Template Header starts -->
+            <div class="login-box-header">
+                <img src="http://www.codershood.info/wp-content/uploads/2015/12/codershood.info-logo1.png">
+            </div>
+            <!-- Template Header ends -->
+ 
+            <!-- Template Body starts -->
+            <div class="login-box-body">
+ 				<form (ngSubmit)="register()">
+	                <!-- Markup for getting Username starts -->
+	                <mat-grid-list cols="9" rowHeight="75px">
+	                    <mat-grid-tile [rowspan]="1" class="login-icon">
+	                    </mat-grid-tile>
+	                    <mat-grid-tile [colspan]="7">
+	                        <mat-form-field class="justifier">
+	                            <input matInput name="name" placeholder="Name" text="text"  [(ngModel)]="registerCredentials.name" required>
+	                        </mat-form-field>
+	                    </mat-grid-tile>
+	                </mat-grid-list>
+	                <!-- Markup for getting Username ends -->
+	                <!-- Markup for getting Username starts -->
+	                <mat-grid-list cols="9" rowHeight="75px">
+	                    <mat-grid-tile [rowspan]="1" class="login-icon">
+	                    </mat-grid-tile>
+	                    <mat-grid-tile [colspan]="7">
+	                        <mat-form-field class="justifier">
+	                            <input matInput name="email" placeholder="Email" text="email"  [(ngModel)]="registerCredentials.email" required>
+	                        </mat-form-field>
+	                    </mat-grid-tile>
+	                </mat-grid-list>
+	                <!-- Markup for getting Username ends -->
+	 
+	                <!-- Markup for getting Password starts -->
+	                <mat-grid-list cols="9" rowHeight="100px">
+	                    <mat-grid-tile [rowspan]="1"  class="login-icon">
+	                    </mat-grid-tile>
+	                    <mat-grid-tile [colspan]="7">
+	                        <mat-form-field class="justifier">
+	                            <input matInput name="password" placeholder="Password" type="password"  [(ngModel)]="registerCredentials.password" required>
+	                        </mat-form-field>
+	                    </mat-grid-tile>
+	                </mat-grid-list>
+	                <!-- Markup for getting Password ends -->
+	 
+	                <button mat-raised-button class="login-button"  color="primary"> 
+	                    Register
+	                </button>
+	            </form>
+	            <p>Already have an account? <a (click)="login()">Login</a></p>
+ 
+            </div>
+            <!-- Template Body ends -->
+            
+        </div>
+    </mat-grid-tile>
+    <!-- Writing markup for login ends -->
+    <mat-grid-tile></mat-grid-tile>
+ 
+</mat-grid-list>
